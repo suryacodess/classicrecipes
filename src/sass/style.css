@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #000;
+  padding: 0 20px;
+}
+.header .searchbar {
+  width: 250px;
+  height: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: red;
+}
+.header .searchbar input {
+  width: 85%;
+  height: 100%;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid black;
+}
+.header .searchbar button {
+  height: 100%;
+  width: 15%;
+  padding: 6px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid black;
+  background: #fff;
+  transition: all 0.4s ease;
+}
+.header .searchbar button:hover {
+  background: rebeccapurple;
+}
+.header .searchbar button:hover i {
+  color: #ffffff;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: #f0f1f3;
+}
+.main .main-inner {
+  width: 90%;
+  margin: 0 auto;
+  padding: 150px 0 150px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .main-inner .recipe-card {
+  width: 600px;
+  height: 400px;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  margin: 20px;
+  overflow-y: scroll;
+}
+.main .main-inner .recipe-card .recipe-description img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .main-inner .recipe-card .recipe-ingredients {
+  padding: 10px 20px;
+}
+.main .main-inner .recipe-card .recipe-ingredients ul li {
+  list-style: none;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #000;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
