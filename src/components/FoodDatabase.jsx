@@ -60,19 +60,19 @@ export default function FoodDatabase() {
             {recipe.map((recipe, i) => {
               return (
                 <>
-                  <div className="recipe-card">
+                  <div className="recipe-card" key={i}>
                     <div className="recipe-description">
                       <img src={recipe.recipe.image} alt={recipe.label} />
                     </div>
                     <div className="recipe-ingredients">
                       <ul>
-                        <p>{recipe.recipe.label}</p>
+                        <h4>{recipe.recipe.label}</h4>
                         <p>calories - {recipe.recipe.calories}</p>
                         <p>Ingredients -</p>
-                        {recipe.recipe.ingredients.map((ing) => {
+                        {recipe.recipe.ingredients.map((ing, i) => {
                           return (
-                            <li>
-                              {"->"} {ing.text}
+                            <li key={i}>
+                             {"-"} {ing.text}
                             </li>
                           );
                         })}
